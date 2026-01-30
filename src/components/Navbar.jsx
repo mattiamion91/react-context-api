@@ -1,4 +1,4 @@
-import { Link, NavLink } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 // importo il mio hook per la gestione del budgetmode
 import { useBudget } from "../contexts/BudgetContext";
 
@@ -28,9 +28,10 @@ function Navbar() {
             </ul>
             {/* Bottone per attivare/disattiva la modalità budget */}
             <button
-                onClick={() => setBudgetMode(!budgetMode)}
+                // al click il setter mi riporta il booleano opposto di quello che ho ora - toggle - 
+                onClick={() => setBudgetMode(!budgetMode)} 
             >
-                {budgetMode ? "Attiva Modalità Budget" : "Disattiva Modalità Budget"}
+                {budgetMode ? "Disattiva Modalità Budget" : "Attiva Modalità Budget"}
             </button>
         </nav>
     )
